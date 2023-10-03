@@ -90,6 +90,10 @@ class numPointer {
 
 	drawRect(x, y, w, h, color){
 		const ctx = this.ctx;
+		ctx.strokeStyle = this.bcolor;
+		ctx.lineWidth = this.lineWidth + 2;
+		ctx.beginPath();
+		ctx.strokeRect(x, y, w, h);
 		ctx.strokeStyle = color;
 		ctx.lineWidth = this.lineWidth;
 		ctx.beginPath();
